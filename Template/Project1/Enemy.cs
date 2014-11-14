@@ -29,5 +29,18 @@ namespace Project1 {
 			Drawer.DrawRotaGraph((int)x+colWidth/2, (int)y+colHeight/2, 1.0, angle + Math.PI/2, "zakoEnemy1", true);
 			Drawer.DrawRect((int)x, (int)y, colWidth, colHeight, new GameColor(0,255,0), false);
 		}
+
+		public double GetX(){
+			return x;
+		}
+		public double GetY(){
+			return y;
+		}
+		public int GetColWidth(){
+			return colWidth;
+		}
+		public int GetColHeight(){
+			return colHeight;
+		}
 	}
 }

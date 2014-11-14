@@ -7,18 +7,19 @@ namespace Project1
 {
 	class MyChar
 	{
-		double x;
+		private double x;
 		double y;
 		int colWidth;
 		int colHeight;
 		int graphWidth;
 		int graphHeight;
-
+		private int life;
 
 		public MyChar(double arg_x, double arg_y){
 			x = arg_x;
 			y = arg_y;
 
+			life = 5;
 			colWidth = 20;
 			colHeight = 20;
 			graphWidth = Drawer.GetGraphWidth("machine");
@@ -50,6 +51,40 @@ namespace Project1
 		public void Draw(){
 			Drawer.DrawGraph((int)x-(graphWidth/2-colWidth/2), (int)y-(graphHeight/2-colHeight/2), "machine", true);
 			Drawer.DrawRect((int)x, (int)y, colWidth, colHeight, new GameColor(0,255,0), false);
+			Drawer.DrawString(0, 0, life+"", new GameColor(255, 255, 255), "SystemFont");
+		}
+
+		public double GetX(){
+			return x;
+		}
+		public double GetY(){
+			return y;
+		}
+		public int GetColWidth(){
+			return colWidth;
+		}
+		public int GetColHeight(){
+			return colHeight;
+		}
+
+		public bool JudgeCollition(Enemy enemy){
+			double X0 = enemy.GetX();
+			double Y0 = enemy.GetY();
+			double X1 = X0 + enemy.GetColWidth();
+			double Y1 = Y0 + enemy.GetColHeight();
+			double x0 = x;
+			double y0 = y;
+			double x1 = x0 + colWidth;
+			double y1 = y0 + colHeight;
+
+			if(x1 > X0 && X1 > x0 && y1 > Y0 && Y1 > y0){
+				return true;
+			}
+			return false;
+		}
+
+		public void Damage(){
+			life = life-1;
 		}
 	}
 }

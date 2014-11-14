@@ -18,6 +18,10 @@ namespace Project1 {
 		public int Update(){
 			mychar.Update();
 			enemy.Update();
+
+			if(mychar.JudgeCollition(enemy)){
+				mychar.Damage();
+			}
 			return 0;
 		}
 
