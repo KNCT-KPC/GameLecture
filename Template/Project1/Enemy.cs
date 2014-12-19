@@ -10,7 +10,6 @@ namespace Project1 {
 		private double angle;
 		int colWidth;
 		int colHeight;
-		int life;
 
 		public Enemy(double arg_x, double arg_y, double arg_angle){
 			x = arg_x;
@@ -19,7 +18,6 @@ namespace Project1 {
 
 			colWidth = 20;
 			colHeight = 20;
-			life = 1;
 		}
 
 		public void Update(){
@@ -43,17 +41,6 @@ namespace Project1 {
 		}
 		public int GetColHeight(){
 			return colHeight;
-		}
-
-		public void Damage(){
-			life = life - 1;
-		}
-
-		public bool isDead(){
-			if(life == 0){
-				return true;
-			}
-			return false;
 		}
 	}
 }
