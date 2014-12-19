@@ -8,11 +8,11 @@ namespace Project1
 	class MyChar
 	{
 		private double x;
-		double y;
-		int colWidth;
-		int colHeight;
-		int graphWidth;
-		int graphHeight;
+		private double y;
+		private int colWidth;
+		private int colHeight;
+		private int graphWidth;
+		private int graphHeight;
 		private int life;
 		private int invinCount;
 

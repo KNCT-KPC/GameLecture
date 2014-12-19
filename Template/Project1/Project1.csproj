@@ -62,6 +62,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bullet.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyMgr.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="GameGraph.cs" />
     <Compile Include="GameSound.cs" />
     <Compile Include="Keyboard.cs" />
-    <Compile Include="MyChr.cs" />
+    <Compile Include="MyChar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Speaker.cs" />
   </ItemGroup>
