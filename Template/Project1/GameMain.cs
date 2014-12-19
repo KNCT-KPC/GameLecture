@@ -8,6 +8,7 @@ namespace Project1 {
 	class GameMain {
 		MyChar mychar = new MyChar(150,400);
 		EnemyMgr eneMgr = new EnemyMgr();
+		Bullet bullet = new Bullet(200,200,0);
 
 		public GameMain(){
 		}
@@ -22,8 +23,9 @@ namespace Project1 {
 		public int Update(){
 			mychar.Update();
 			eneMgr.Update();
-			eneMgr.Collition(mychar);
+			bullet.Update();
 
+			eneMgr.Collition(mychar);
 			return 0;
 		}
 
@@ -34,6 +36,7 @@ namespace Project1 {
 		public void Draw(){
 			mychar.Draw();
 			eneMgr.Draw();
+			bullet.Draw();
 		}
 	}
 }
