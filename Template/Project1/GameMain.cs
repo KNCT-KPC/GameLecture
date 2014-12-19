@@ -7,7 +7,11 @@ namespace Project1 {
 	//ゲームのプログラムを記述するクラス
 	class GameMain {
 		MyChar mychar = new MyChar(150,400);
-		Enemy enemy = new Enemy(100,100,Math.PI/2);
+		EnemyMgr eneMgr = new EnemyMgr();
+
+		public GameMain(){
+		}
+		
 
 		/// <summary>
 		/// 更新メソッド
@@ -17,11 +21,9 @@ namespace Project1 {
 		/// </summary>
 		public int Update(){
 			mychar.Update();
-			enemy.Update();
+			eneMgr.Update();
+			eneMgr.Collition(mychar);
 
-			if(mychar.JudgeCollition(enemy)){
-				mychar.Damage();
-			}
 			return 0;
 		}
 
@@ -31,7 +33,7 @@ namespace Project1 {
 		/// </summary>
 		public void Draw(){
 			mychar.Draw();
-			enemy.Draw();
+			eneMgr.Draw();
 		}
 	}
 }

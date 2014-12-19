@@ -50,3 +50,8 @@ C:\Users\mori\Documents\GitHub\GameLecture\Template\Project1\obj\x86\Release\Pro
 C:\Users\mori\Documents\GitHub\GameLecture\Template\Project1\obj\x86\Release\Project1.csprojResolveAssemblyReference.cache
 C:\Users\mori\Documents\GitHub\GameLecture\Template\Project1\bin\Release\Project1.exe
 C:\Users\mori\Documents\GitHub\GameLecture\Template\Project1\bin\Release\Project1.pdb
+C:\Users\mori\Downloads\Template\Project1\obj\x86\Release\Project1.exe
+C:\Users\mori\Downloads\Template\Project1\obj\x86\Release\Project1.pdb
+C:\Users\mori\Downloads\Template\Project1\bin\Release\Project1.exe
+C:\Users\mori\Downloads\Template\Project1\bin\Release\Project1.pdb
+C:\Users\mori\Downloads\Template\Project1\obj\x86\Release\Project1.csprojResolveAssemblyReference.cache

@@ -14,11 +14,13 @@ namespace Project1
 		int graphWidth;
 		int graphHeight;
 		private int life;
+		private int invinCount;
 
 		public MyChar(double arg_x, double arg_y){
 			x = arg_x;
 			y = arg_y;
 
+			invinCount = 0;
 			life = 5;
 			colWidth = 20;
 			colHeight = 20;
@@ -46,10 +48,17 @@ namespace Project1
             {
                 x += accel;
             }
+			
+			if(invinCount > 0){
+				invinCount = invinCount-1;
+			}
 		}
 
 		public void Draw(){
-			Drawer.DrawGraph((int)x-(graphWidth/2-colWidth/2), (int)y-(graphHeight/2-colHeight/2), "machine", true);
+			if((invinCount/8)%2 == 0){
+				Drawer.DrawGraph((int)x-(graphWidth/2-colWidth/2), (int)y-(graphHeight/2-colHeight/2), "machine", true);
+			}
+
 			Drawer.DrawRect((int)x, (int)y, colWidth, colHeight, new GameColor(0,255,0), false);
 			Drawer.DrawString(0, 0, life+"", new GameColor(255, 255, 255), "SystemFont");
 		}
@@ -84,7 +93,10 @@ namespace Project1
 		}
 
 		public void Damage(){
-			life = life-1;
+			if(invinCount == 0){
+				life = life-1;
+				invinCount = 160;
+			}
 		}
 	}
 }
