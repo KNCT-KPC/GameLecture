@@ -8,7 +8,7 @@ namespace Project1 {
 	class GameMain {
 		MyChar mychar = new MyChar(150,400);
 		EnemyMgr eneMgr = new EnemyMgr();
-		Bullet bullet = new Bullet(200,200,0);
+		Bullet bullet = new Bullet(200,200,Math.PI/2*3);
 
 		public GameMain(){
 		}
@@ -26,6 +26,17 @@ namespace Project1 {
 			bullet.Update();
 
 			eneMgr.Collition(mychar);
+
+
+			Enemy[] e = eneMgr.GetEnemy();
+			for(int i = 0; i < e.Length; i++){
+				if(e[i] != null){
+					if(bullet.JudgeCollition(e[i])){
+						e[i].Damage();
+					}
+				}
+			}
+
 			return 0;
 		}
 

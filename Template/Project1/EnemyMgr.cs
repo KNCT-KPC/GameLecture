@@ -17,6 +17,11 @@ namespace Project1 {
 			for(int i = 0; i < eneAry.Length; i++){
 				if(eneAry[i] != null){
 					eneAry[i].Update();
+
+					if(eneAry[i].isDead()){
+						eneAry[i] = null;
+					}
+
 				}
 			}			
 		}
@@ -37,6 +42,10 @@ namespace Project1 {
 					eneAry[i].Draw();
 				}
 			}		
+		}
+
+		public Enemy[] GetEnemy(){
+			return eneAry;
 		}
 	}
 }
