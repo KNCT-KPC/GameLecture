@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bullet.cs" />
+    <Compile Include="BulletMgr.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyMgr.cs" />

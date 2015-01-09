@@ -26,7 +26,7 @@ namespace Project1 {
 			}			
 		}
 
-		public void Collition(MyChar mychar){
+		public void CollitionToMyChar(MyChar mychar){
 			for(int i = 0; i < eneAry.Length; i++){
 				if(eneAry[i] != null){
 					if(mychar.JudgeCollition(eneAry[i])){
