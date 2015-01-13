@@ -15,6 +15,8 @@ namespace Project1
 		private int graphHeight;
 		private int life;
 		private int invinCount;
+		private BulletMgr bltMgr;
+
 
 		public MyChar(double arg_x, double arg_y){
 			x = arg_x;
@@ -48,6 +50,16 @@ namespace Project1
             {
                 x += accel;
             }
+
+
+			//ショット処理
+            if (Keyboard.GetCount(Keyboard.KeyCode.CODE_Z) > 0)
+            {
+				//たまをついかする
+				bltMgr.AddBullet(new Bullet(x,y,Math.PI/2*3));
+            }
+
+
 			
 			if(invinCount > 0){
 				invinCount = invinCount-1;
@@ -97,6 +109,10 @@ namespace Project1
 				life = life-1;
 				invinCount = 160;
 			}
+		}
+
+		public void SetBulletMgr(BulletMgr arg_bltMgr){
+			bltMgr = arg_bltMgr;
 		}
 	}
 }

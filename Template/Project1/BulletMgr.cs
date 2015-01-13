@@ -8,9 +8,7 @@ namespace Project1 {
 		Bullet[] bltAry = new Bullet[256];
 
 		public BulletMgr(){
-			bltAry[0] = new Bullet(100,200,Math.PI/2*3);
-			bltAry[1] = new Bullet(150,200,Math.PI/2*3);
-			bltAry[2] = new Bullet(200,200,Math.PI/2*3);
+
 		}
 
 		public void Update(){
@@ -39,6 +37,15 @@ namespace Project1 {
 							}
 						}
 					}
+				}
+			}
+		}
+
+		public void AddBullet(Bullet blt){
+			for(int i = 0; i < bltAry.Length; i++){
+				if(bltAry[i] == null){
+					bltAry[i] = blt;
+					break;
 				}
 			}
 		}

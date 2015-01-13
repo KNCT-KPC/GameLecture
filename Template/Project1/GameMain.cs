@@ -11,6 +11,7 @@ namespace Project1 {
 		BulletMgr bltMgr = new BulletMgr();
 
 		public GameMain(){
+			mychar.SetBulletMgr(bltMgr);
 		}
 		
 

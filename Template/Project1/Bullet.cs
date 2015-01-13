@@ -16,7 +16,7 @@ namespace Project1 {
 			y = arg_y;
 			angle = arg_angle;
 
-			colWidth = 10;
+			colWidth = 16;
 			colHeight = 30;
 		}
 
