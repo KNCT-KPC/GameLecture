@@ -16,6 +16,7 @@ namespace Project1
 		private int life;
 		private int invinCount;
 		private BulletMgr bltMgr;
+		private int shotInterval;
 
 
 		public MyChar(double arg_x, double arg_y){
@@ -53,11 +54,17 @@ namespace Project1
 
 
 			//ショット処理
-            if (Keyboard.GetCount(Keyboard.KeyCode.CODE_Z) > 0)
-            {
-				//たまをついかする
-				bltMgr.AddBullet(new Bullet(x,y,Math.PI/2*3));
-            }
+
+			if(shotInterval == 0){
+	            if (Keyboard.GetCount(Keyboard.KeyCode.CODE_Z) > 0)
+		        {
+					//たまをついかする
+					bltMgr.AddBullet(new Bullet(x,y,Math.PI/2*3));
+					shotInterval = 12;
+			    }
+			} else {
+				shotInterval--;
+			}
 
 
 			

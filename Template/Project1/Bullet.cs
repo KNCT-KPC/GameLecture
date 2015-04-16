@@ -21,8 +21,8 @@ namespace Project1 {
 		}
 
 		public void Update(){
-			x += 8.0 * Math.Cos(angle);
-			y += 8.0 * Math.Sin(angle);
+			x += 10.0 * Math.Cos(angle);
+			y += 10.0 * Math.Sin(angle);
 		}
 
 		public void Draw(){
@@ -41,6 +41,13 @@ namespace Project1 {
 			double y1 = y0 + colHeight;
 
 			if(x1 > X0 && X1 > x0 && y1 > Y0 && Y1 > y0){
+				return true;
+			}
+			return false;
+		}
+
+		public bool isDead(){
+			if(x > 640 || x < -colWidth || y > 480 || y < -colHeight){
 				return true;
 			}
 			return false;

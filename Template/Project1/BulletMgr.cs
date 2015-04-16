@@ -15,6 +15,9 @@ namespace Project1 {
 			for(int i = 0; i < bltAry.Length; i++){
 				if(bltAry[i] != null){
 					bltAry[i].Update();
+					if(bltAry[i].isDead()){
+						bltAry[i] = null;
+					}
 				}
 			}
 		}
