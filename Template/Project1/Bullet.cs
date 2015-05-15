@@ -10,6 +10,7 @@ namespace Project1 {
 		private int colWidth;
 		private int colHeight;
 		private double angle;
+		private bool live;
 
 		public Bullet(double arg_x, double arg_y, double arg_angle){
 			x = arg_x;
@@ -18,11 +19,16 @@ namespace Project1 {
 
 			colWidth = 16;
 			colHeight = 30;
+			live = true;
 		}
 
 		public void Update(){
 			x += 10.0 * Math.Cos(angle);
 			y += 10.0 * Math.Sin(angle);
+
+			if(x > 640 || x < -colWidth || y > 480 || y < -colHeight){
+				live = false;
+			}
 		}
 
 		public void Draw(){
@@ -47,10 +53,11 @@ namespace Project1 {
 		}
 
 		public bool isDead(){
-			if(x > 640 || x < -colWidth || y > 480 || y < -colHeight){
-				return true;
-			}
-			return false;
+			return !live;
+		}
+
+		public void Kill(){
+			live = false;
 		}
 	}
 }

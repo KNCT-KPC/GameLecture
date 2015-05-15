@@ -60,7 +60,7 @@ namespace Project1
 		        {
 					//たまをついかする
 					bltMgr.AddBullet(new Bullet(x,y,Math.PI/2*3));
-					shotInterval = 12;
+					shotInterval = 10;
 			    }
 			} else {
 				shotInterval--;

@@ -37,6 +37,7 @@ namespace Project1 {
 						if(eneAry[i] != null){
 							if(bltAry[j].JudgeCollition(eneAry[i])){
 								eneAry[i].Damage();
+								bltAry[j].Kill();
 							}
 						}
 					}

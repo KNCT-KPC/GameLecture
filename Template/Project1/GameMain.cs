@@ -9,6 +9,7 @@ namespace Project1 {
 		MyChar mychar = new MyChar(150,400);
 		EnemyMgr eneMgr = new EnemyMgr();
 		BulletMgr bltMgr = new BulletMgr();
+		int gameCount = 0;
 
 		public GameMain(){
 			mychar.SetBulletMgr(bltMgr);
@@ -23,12 +24,13 @@ namespace Project1 {
 		/// </summary>
 		public int Update(){
 			mychar.Update();
-			eneMgr.Update();
+			eneMgr.Update(gameCount);
 			bltMgr.Update();
 
 			eneMgr.CollitionToMyChar(mychar);
 			bltMgr.CollitionToEnemy(eneMgr.GetEnemy());
 
+			gameCount++;
 			return 0;
 		}
 

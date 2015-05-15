@@ -67,6 +67,7 @@
     <Compile Include="Drawer.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyMgr.cs" />
+    <Compile Include="EnemyOrder.cs" />
     <Compile Include="GameFont.cs" />
     <Compile Include="GameMain.cs" />
     <Compile Include="GameGraph.cs" />
