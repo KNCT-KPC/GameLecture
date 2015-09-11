@@ -10,11 +10,16 @@ namespace Project1 {
 		public int startY;
 		public double startAngle;
 
-		public EnemyOrder(int arg_spawnCount, int arg_startX, int arg_startY, double arg_startAngle){
+		public int life;
+		public string graphName;
+
+		public EnemyOrder(int arg_spawnCount, int arg_startX, int arg_startY, double arg_startAngle, int arg_life, string arg_graphName){
 			spawnCount = arg_spawnCount;
 			startX = arg_startX;
 			startY = arg_startY;
 			startAngle = arg_startAngle;
+			life = arg_life;
+			graphName = arg_graphName;
 		}
 	}
 }

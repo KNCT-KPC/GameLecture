@@ -7,13 +7,13 @@ namespace Project1 {
 	class EnemyMgr {
 		Enemy[] eneAry = new Enemy[64];
 		EnemyOrder[] order = new EnemyOrder[]{
-			new EnemyOrder(10, 100, 0, Math.PI/2),
-			new EnemyOrder(10, 150, 0, Math.PI/2),		
-			new EnemyOrder(10, 200, 0, Math.PI/2),
-			new EnemyOrder(200, 60, 0, Math.PI/2),
-			new EnemyOrder(220, 105, 0, Math.PI/2),
-			new EnemyOrder(220, 160, 0, Math.PI/2),
-			new EnemyOrder(200, 215, 0, Math.PI/2),
+			new EnemyOrder(10, 100, 0, Math.PI/2, 1, "zakoEnemy1"),
+			new EnemyOrder(10, 150, 0, Math.PI/2, 1, "zakoEnemy1"),		
+			new EnemyOrder(10, 200, 0, Math.PI/2, 1, "zakoEnemy1"),
+			new EnemyOrder(200, 60, 0, Math.PI/2, 2, "zakoEnemy2"),
+			new EnemyOrder(220, 105, 0, Math.PI/2, 2, "zakoEnemy2"),
+			new EnemyOrder(220, 160, 0, Math.PI/2, 2, "zakoEnemy2"),
+			new EnemyOrder(200, 215, 0, Math.PI/2, 2, "zakoEnemy2"),
 		};
 
 
@@ -24,7 +24,7 @@ namespace Project1 {
 				if(gameCount == order[i].spawnCount){
 					for(int j = 0; j < eneAry.Length; j++){
 						if(eneAry[j] == null){
-							eneAry[j] = new Enemy(order[i].startX, order[i].startY, order[i].startAngle);
+							eneAry[j] = new Enemy(order[i].startX, order[i].startY, order[i].startAngle, order[i].life, order[i].graphName);
 							break;
 						}
 					}

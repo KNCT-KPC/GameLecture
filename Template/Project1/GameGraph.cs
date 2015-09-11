@@ -22,6 +22,7 @@ namespace Project1 {
 			new GraphData("zakoEnemy1", "img/zakoEnemy1.png"),
 			new GraphData("zakoEnemy2", "img/zakoEnemy2.png"),
 			new GraphData("myshot1","img/myshot.png"),
+			new GraphData("eneshot1", "img/ene_sm.png"),
 		};
 
 
